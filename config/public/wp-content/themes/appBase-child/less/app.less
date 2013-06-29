@@ -1,0 +1,437 @@
+
+@import "easings";
+@import "typefaces";
+@import "mixins";
+@import "vars";
+
+
+/*************** A P P L I C A T I O N   S T Y L E S ****************/
+/**************************************************************************/
+
+html {
+    background:@black;
+}
+body {
+    background:@grey;
+    color:@white;
+    font-family: @font-family-base;
+}
+
+a {
+    color:@links;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-heading;
+  font-weight:normal;
+}
+
+
+#footer {
+    position: relative;
+    background:@black;
+    padding-top: 2em;
+    margin-top:5em;
+    
+    #footerText {
+        font-size:.7em;
+        color:@grey;
+        line-height: 1.1em;
+    }
+    
+    #footerCopyright {
+        font-size:.7em;
+        color:@grey;
+        line-height: 1.1em;
+    }
+    
+    
+}
+
+.top-bar {
+    z-index: 1 !important;
+    
+    
+    .toggle-topbar {
+        text-align: left;
+    }
+    
+    .title-area {
+        text-align: center;
+        float: none;
+    }
+    
+    .sitetitle {
+        
+        padding-top:7px;
+        
+        img {
+            
+            width:30px;
+            height:30px;
+        }
+    }
+    
+    
+}
+
+.tertieryLinks {
+    
+    position: absolute;
+    top:8px;
+    left:52%;
+    padding:5px;
+      
+      
+      li {
+        list-style: none;
+        float:left;
+        
+      }
+      
+      
+    .socialFacebook {
+        background:url('../img/tertieryLinks.png') no-repeat;
+        background-position: 0 0;
+        text-indent: -9999px;
+        display:inline-block !important;
+     
+        width:10px;
+        height:17px;
+        
+        &:hover {
+             background:url('../img/tertieryLinks.png') no-repeat;
+             background-position: 0 -17px;
+             padding:0px;
+             
+             
+             .transition( all .15s @ease-out-sine );
+        }
+    }
+    
+    .socialTwitter {
+        background:url('../img/tertieryLinks.png') no-repeat;
+        background-position: -10px 0;
+        text-indent: -9999px;
+        display:inline-block !important;
+       
+        width:20px;
+        height:17px;
+        
+        &:hover {
+             background:url('../img/tertieryLinks.png') no-repeat;
+             background-position: -10px -17px;
+             padding:0px;
+             .transition( all .15s @ease-out-sine );
+        }
+    }
+    
+    .socialInstagram {
+        background:url('../img/tertieryLinks.png') no-repeat;
+        background-position: -30px 0;
+        text-indent: -9999px;
+        display:none !important;
+      
+        width:20px;
+        height:17px;
+        
+        &:hover {
+             background:url('../img/tertieryLinks.png') no-repeat;
+             background-position: -30px -17px;
+             padding:0px;
+             .transition( all .15s @ease-out-sine );
+        }
+    }
+    .socialYouTube {
+        background:url('../img/tertieryLinks.png') no-repeat;
+        background-position: -50px 0;
+        text-indent: -9999px;
+        display:inline-block !important;
+      
+        width:20px;
+        height:17px;
+        
+        &:hover {
+             background:url('../img/tertieryLinks.png') no-repeat;
+             background-position: -50px -17px;
+             padding:0px;
+             .transition( all .15s @ease-out-sine );
+        }
+    }
+    .socialVimeo {
+        background:url('../img/tertieryLinks.png') no-repeat;
+        background-position: -70px 0;
+        text-indent: -9999px;
+        display:inline-block !important;
+      
+        width:17px;
+        height:17px;
+        
+        &:hover {
+             background:url('../img/tertieryLinks.png') no-repeat;
+             background-position: -70px -17px;
+             padding:0px;
+             .transition( all .15s @ease-out-sine );
+        }
+    }
+  
+}
+
+
+
+
+
+
+
+
+/******* FORMS *********/
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    font-style:italic;
+  //  padding:1.4em;
+   
+    border:1px solid #999;
+    .border-radius(3px);
+    &:hover {
+        border: 1px solid fade(@links, 40%);
+        background:fade(@purple, 30%);
+        color:@white;
+        
+        .placeholder {
+            color:@white;
+        }
+        
+        
+        .transition( all .45s @ease-out-sine );
+    }
+    
+    &:focus, &:active, {
+        border: 1px solid fade(@links, 60%);
+        background:fade(@links, 80%);
+        color:@white;
+        
+        
+        .transition( all .25s @ease-out-sine );
+    }
+}
+
+
+::-webkit-input-placeholder
+{
+  color: #aaa !important;
+  font-weight: normal;
+}
+.placeholder
+{
+  color: #aaa !important;
+}
+
+
+button, .button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    background: @links;
+    color:@white;
+    border:2px solid @links;
+    .border-radius(3px);
+    padding:0.2em 1em 0.2em;
+    text-transform: uppercase;
+    text-align: right;
+    width:100%;
+    font-family:@font-family-base;
+    font-weight: normal;
+    box-shadow:none;
+    clear:both;
+    
+    
+    &:hover {
+        border: 3px solid fade(@white, 20%);
+        background:fade(@links, 60%);
+        
+        
+        .transition( all .25s @ease-out-sine );
+    }
+}
+
+
+
+table {
+    background:transparent;
+    border: none;
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background:transparent;
+}
+
+
+
+/*  general  */
+
+
+.white {
+    color:@white;
+}
+.black {
+    color:@black;
+}
+.txtCenter {
+    text-align: center;
+}
+.txtLeft {
+    text-align: left;
+}
+.txtRight {
+    text-align: right;
+}
+.txtJustify {
+    text-align: justify;
+}
+.copyright {
+  font-family: @font-family-base-bold;
+}
+
+.insetCopy {
+  
+  padding:1em 5em;
+}
+
+.padTop {
+  padding-top:1em;
+}
+.padRight {
+  padding-right:1em;
+}
+.padBot {
+  padding-bottom:1em;
+}
+.padLeft {
+  padding-left:1em;
+}
+
+.fitWidth {
+  width:100%;
+}
+
+.pullTopMargin {
+  margin-top:-1em;
+}
+
+.delineatedCopy {
+    padding:2em 0;
+    border-top:2px dotted fade(@white, 60%);
+    border-bottom:2px dotted fade(@white, 60%);
+}
+
+
+/* MODAL WINDOWS */
+
+.close-reveal-modal {
+    right:-24px !important;
+    top:0px !important;
+    background: @black;
+    padding:8px;
+    .border-radius(3px);
+    font-size:12px !important;
+}
+
+.reveal-modal-bg {
+    background:rgba(119, 119, 119, 0.7);
+}
+
+
+
+
+
+    
+   
+/********************/
+/*  backgrounds */
+
+.bgFill {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    
+    .pattern {
+        background:url('../img/pattern.png');
+        background-repeat: repeat;
+        width: 100%;
+        height:100%;
+        position: absolute;
+        
+    }
+}
+
+
+
+
+/**************************/
+/****** SECTIONS ********/
+
+/* Home */
+
+
+
+
+
+
+/*********** M E D I A  S C R E E N S **************/
+/**************************************************/
+
+/* We use this media query to add styles to any device that supports media queries */
+@media only screen { }
+
+
+@media only screen and (max-width: 980px) {
+    
+    
+}
+
+
+@media only screen and (min-width: 550px) and (max-width:1001px) {
+    
+   
+   
+}
+@media only screen and (min-width: 550px) and (max-width:769px) {
+    
+   
+   
+}
+@media only screen and (min-width: 770px) and (max-width:920px) {
+    
+  
+   
+}
+@media only screen and (max-width:549px) {
+    
+
+}
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Used to alter styles for screens at least 1280px wide. */
+@media only screen and (min-width: 1280px) {
+    
+   
+}
+
+/* Used to alter styles for screens at least 1440px wide. */
+@media only screen and (min-width: 1440px) {}
+
+/* Apply styles to screens in landscape orientation */
+@media only screen and (orientation: landscape) {}
+
+/* Apply styles to screens in portrait orientation */
+@media only screen and (orientation: portrait) {}
+
+/* We also use Modernizr to add a .touch class to the body when applicable */
+/* You can prepend this class to anything and it will style only for touch devices */
+.touch .your-element {}
+
+
+///   THESE AREN'T THE DROIDS YOU ARE LOOKING FOR   ///

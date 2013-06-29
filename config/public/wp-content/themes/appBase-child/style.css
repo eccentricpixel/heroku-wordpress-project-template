@@ -1,0 +1,11 @@
+/*
+Theme Name: appBase-child
+Description: The functionality and presentation of the site are created within this theme.  Only the bare essentials are found in the parent folder.  This is a child of the appBase theme.  The appBase parent folder should not be edited.  This way you can develop alternate versions of the site and very easily switch between them without compromising the core logic.  This is a great way to accomodate marketing events, pre-registration and various stages of launches for larger projects or a site with ongoing development.  DO NOT ADD YOUR STYLES IN THIS FILE.  This file is only for Wordpress to know what to do.  Your CSS should be added to the /less/app.less file which is then compiled to /css/app.css.  If for some peculiar reason, you don't want to use LESS, then edit the app.css directly.  /js/app.js and /css/app.css are both declared in the functions.php file.  *****Note that throughout this child theme, you'll want to use get_stylesheet_directory_uri() instead of get_template_directory_uri() BECAUSE this is a child theme!
+Author: Elijah Shepard
+Author URI: http: //eccentricpixel.com
+Template: appBase
+Version: 1.0
+*/
+
+
+
