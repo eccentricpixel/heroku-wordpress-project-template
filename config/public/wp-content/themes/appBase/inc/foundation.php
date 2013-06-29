@@ -138,57 +138,5 @@ function foundation_page_menu_class($ulclass) {
 add_filter('wp_page_menu','foundation_page_menu_class');
 
 
-// Orbit, for WordPress
-
-add_action('init', 'Orbit');
-
-function Orbit(){
-	$Orbit_args = array(
-		'label'	=> __('Orbit'),
-		'singular_label' =>	__('Orbit'),
-		'public'	=>	true,
-		'show_ui'	=>	true,
-		'capability_type'	=>	'post',
-		'hierarchical'	=>	false,
-		'rewrite'	=>	true,
-		'supports'	=>	array('title', 'editor','page-attributes','thumbnail'),
-		'taxonomies' => array('category','post_tag')
-		);
-		register_post_type('Orbit', $Orbit_args);
-}
-
-function SliderContent(){
-
-	$args = array( 'post_type' => 'Orbit');
-	$loop = new WP_Query( $args );
-
-	echo '<ul data-orbit>';
-
-		while ( $loop->have_posts() ) : $loop->the_post();
-
-			if(has_post_thumbnail()) {
-
-				$orbitimage = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail_size');
-				$orbitimagealttext = get_post_meta(get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true);
-				echo '<li>';
-				echo '<img src="'. $orbitimage['0'] . '" alt="' . $orbitimagealttext . '"/>';
-				echo '</li>';
-
-			} else {
-
-				echo '<div class="content">';
-
-					the_title();
-					the_content();
-
-				echo '</div>';
-
-			}
-
-		endwhile;
-
-		echo '</ul>';
-
-}
 
 ?>
