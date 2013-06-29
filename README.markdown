@@ -1,4 +1,4 @@
-# Wordpress on Heroku
+# Heroku Wordpress
 
 This is where changes to your Wordpress site are made.  Changes committed to this directory will overwrite all the vendor defaults.
 
@@ -16,4 +16,5 @@ Generally, you'll be interested in adding plugins, adding themes, and modifying 
             └── etc       # php-fpm.conf
 ```
 
-For everything you ever wanted to know about running Wordpress on Heroku, check out my [heroku-buildpack-wordpress](http://github.com/mchung/heroku-buildpack-wordpress).
+The best way to use this is to run the buildpack to configure your Heroku APP.  This buildpack will install all of the Add-Ons needed.  You can get the buildpack here: https://github.com/eccentricpixel/heroku-wordpress-buildpack
+
